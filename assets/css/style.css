@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5rem; /* moves content in the body down slightly so it doesnt end up behind the navbar */
+}
+
+.homepagebanner {
+    background: url(../images/BAND.jpeg) center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 5rem;
+    
+    /* Sets height of the banner to visible space in browser */
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+nav {
+    background-color: #333;
+    /* border-radius: 5px; -------dunno about the look */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 1rem;
+    /* position: relative; */
+
+    /* Fix the navbar along the top of page when scrolling down */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* z-index: 1000; */
+
+    /* Adds subtle drop shadow to bottom of navbar - looks nice */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    border-radius: 5px;
+}
+
+/* The logo wiggles when hovered */
+/* .logo:hover {
+    animation: wiggle 0.5s ease-in-out;
+} */
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+
+    /* Reserve space bottom for hover indicator */
+    border-bottom: 0.3rem solid transparent;
+    /* Transition will fade in the underline rather than pop it in */
+    transition: border-color 0.3s ease; 
+
+    /* Reserving space pushed the text up a little, this re-centres it a little */
+    line-height: 1.2;
+}
+
+.nav-links a:hover {
+    border-bottom-color: black;
+}
+
+@media (min-width: 601px) {
+    .nav-links a:hover{
+        animation: wiggle 0.3s ease-in-out;
+    }    
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        border-top: 1px solid #444;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Expand the hamburger menu when clicked */
+    #menu-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+    }
+    
+    /* Flex is collapsing the margin. Below expicitly spaces them so the menu doesnt squash */
+    .nav-links a:last-child {
+    margin-bottom: 1rem;
+    }
+}
+
+/* Wiggle animation */
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(-15deg); }
+    30% { transform: rotate(15deg); }
+    45% { transform: rotate(-10deg); }
+    60% { transform: rotate(10deg); }
+    75% { transform: rotate(-5deg); }
+    90% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+} 
