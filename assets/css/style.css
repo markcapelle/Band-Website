@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -30,13 +32,11 @@ main {
 
 nav {
     background-color: #333;
-    /* border-radius: 5px; -------dunno about the look */
-    color: white;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0rem 1rem;
-    /* position: relative; */
 
     /* Fix the navbar along the top of page when scrolling down */
     position: fixed;
@@ -56,18 +56,13 @@ nav {
     border-radius: 5px;
 }
 
-/* The logo wiggles when hovered */
-/* .logo:hover {
-    animation: wiggle 0.5s ease-in-out;
-} */
-
 .nav-links {
     display: flex;
     gap: 1rem;
 }
 
 .nav-links a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 0.5rem;
 
@@ -81,7 +76,7 @@ nav {
 }
 
 .nav-links a:hover {
-    border-bottom-color: black;
+    border-bottom-color: #000;
 }
 
 @media (min-width: 601px) {
@@ -96,10 +91,11 @@ nav {
     cursor: pointer;
 }
 
+/* Using 'span' tag to draw the hamburger menu button lines */
 .hamburger span {
     height: 3px;
     width: 25px;
-    background: white;
+    background: #ffffff;
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -117,11 +113,6 @@ nav {
         background-color: #333;
         flex-direction: column;
         display: none;
-    }
-
-    .nav-links a {
-        padding: 1rem;
-        border-top: 1px solid #444;
     }
 
     .hamburger {
@@ -147,6 +138,39 @@ nav {
     45% { transform: rotate(-10deg); }
     60% { transform: rotate(10deg); }
     75% { transform: rotate(-5deg); }
-    90% { transform: rotate(5deg); }
+    90% { transform: rotate(5deg);  }
     100% { transform: rotate(0deg); }
 } 
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #ffffff;
+
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+footer a:link, a:visited {
+    color: #ffffff;
+}
+
+/* CSS Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
