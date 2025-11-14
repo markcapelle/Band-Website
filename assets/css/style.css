@@ -28,6 +28,8 @@ main {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+
+    padding: 2em;
 }
 
 nav {
@@ -104,6 +106,7 @@ nav {
     display: none;
 }
 
+/* When screen size is reduced for responsive design minimise nav */
 @media (max-width: 600px) {
     .nav-links {
         position: absolute;
@@ -141,6 +144,92 @@ nav {
     90% { transform: rotate(5deg);  }
     100% { transform: rotate(0deg); }
 } 
+
+
+
+/* Welcome section ================================================================*/
+.welcome-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 900px;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.welcome-section .content-box {
+  flex: 1 1 300px;
+  background: #eaeaea;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.welcome-section .empty-box {
+  flex: 1 1 300px;
+  /* background: #eaeaea; */
+  padding: 1rem;
+  /* border-radius: 8px; */
+}
+
+/* Members section */
+.members-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+/* Band member card */
+.member-card {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Zig-zag layout */
+.member-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.member-info, .member-image {
+  flex: 1 1 300px;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.member-info {
+  background: #f9f9f9;
+}
+
+.member-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Collapse the welcome section and cards */
+@media (max-width: 850px) {
+    .welcome-section {
+    flex-direction: column;
+  }
+
+  .member-card {
+    flex-direction: column;
+  }
+
+  .member-card:nth-child(even) {
+    flex-direction: column;
+  }
+
+    .welcome-section .empty-box {
+    display: none;
+  }
+}
+/* ================================================================== */
+
+
 
 /* Footer */
 footer {
