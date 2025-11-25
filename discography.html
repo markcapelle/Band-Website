@@ -63,104 +63,151 @@
         
         <section class="discography-section">
             <h1>Discography</h1>
-            <table class="album-table">
-                <tr>
-                    <th colspan="3"><h3>SONGS</h3></th>
-                </tr>
-                <tr>
-                    <td rowspan="5">
-                        <img class="album-art" src="https://placehold.co/500" alt="Album cover.">
-                    </td>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-            </table>
-            <blockquote cite="https://www.rollingstone.com/">
-                "The songs have beginnings, middles, and ends. The melodies are present. The rhythms occur. It is, objectively, an album."
-                <p class="review-source">- Rolling Stone</p>
-            </blockquote>
-            
-            <table class="album-table">
-                <tr>
-                    <th colspan="3"><h3>MORE SONGS</h3></th>
-                </tr>
-                <tr>
-                    <td rowspan="5">
-                        <img class="album-art" src="https://placehold.co/500" alt="Album cover.">
-                    </td>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-            </table>
-            <blockquote cite="https://www.metacritic.com/music">
-                "Following the precedent set by 'Songs,' this album delivers additional songs. The sonic experience continues. Listeners will hear sounds. The sounds are arranged. Satisfaction is statistically probable."
-                <p class="review-source">- Metacritic</p>
-            </blockquote>
-            
-            <table class="album-table">
-                <tr>
-                    <th colspan="3"><h3>ALL THE SONGS</h3></th>
-                </tr>
-                <tr>
-                    <td rowspan="5">
-                        <img class="album-art" src="https://placehold.co/500" alt="Album cover.">
-                    </td>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-                <tr>
-                    <td>song</td>
-                    <td>xx:xx</td>
-                </tr>
-            </table>
-            <blockquote cite="https://knowyourmeme.com/photos/2051481-source-i-made-it-up">
-                "This album contains all the songs. Not some. Not most. All. It is a comprehensive sonic archive. The listening experience is long. The songs are sequential. The emotional range is statistically significant. For fans of 'Songs' and 'More Songs,' this is the final form. Completion has been achieved. There is nothing left to add. Or subtract. It is the musical equivalent of a full hard drive."
-                <p class="review-source">- Trust Me, Bro</p>
-            </blockquote>
+
+            <div class="tab-container">
+                <!-- Radio buttons -->
+                <input type="radio" id="tab1" name="tabs" checked>
+                <label class="tab-label" for="tab1">SONGS</label>
+
+                <input type="radio" id="tab2" name="tabs">
+                <label class="tab-label" for="tab2">MORE SONGS</label>
+
+                <input type="radio" id="tab3" name="tabs">
+                <label class="tab-label" for="tab3">ALL THE SONGS</label>
+
+                <!-- Tab content -->
+                <div id="content1" class="tab-content">
+                    <table class="album-table">
+                        <tr>
+                            <th colspan="3"><h3>SONGS</h3></th>
+                        </tr>
+                        <tr>
+                            <td rowspan="5">
+                                <img class="album-art" src="https://placehold.co/10" alt="Album cover.">
+                            </td>
+                            <td>First Song</td>
+                            <td>03:27</td>
+                        </tr>
+                        <tr>
+                            <td>The Song that is Second in the List</td>
+                            <td>01:51</td>
+                        </tr>
+                        <tr>
+                            <td>Second Song After the First</td>
+                            <td>02:44</td>
+                        </tr>
+                        <tr>
+                            <td>Second to Last Song</td>
+                            <td>05:09</td>
+                        </tr>
+                        <tr>
+                            <td>Fifth and Final Song</td>
+                            <td>03:18</td>
+                        </tr>
+                    </table>
+                    <blockquote cite="https://www.rollingstone.com/">
+                        "The songs have beginnings, middles, and ends. The melodies are present. The rhythms occur. It is, objectively, an album."
+                        <p class="review-source">- Rolling Stone</p>
+                    </blockquote>
+                </div>
+                
+                <div id="content2" class="tab-content">
+                    <table class="album-table">
+                        <tr>
+                            <th colspan="3"><h3>MORE SONGS</h3></th>
+                        </tr>
+                        <tr>
+                            <td rowspan="6">
+                                <img class="album-art" src="https://placehold.co/10" alt="Album cover.">
+                            </td>
+                            <td>The First Song of More Songs</td>
+                            <td>03:31</td>
+                        </tr>
+                        <tr>
+                            <td>The Second Song of the Second Album</td>
+                            <td>04:26</td>
+                        </tr>
+                        <tr>
+                            <td>Third Song, Continuing the Sequence</td>
+                            <td>02:59</td>
+                        </tr>
+                        <tr>
+                            <td>Fourth in the Lineup</td>
+                            <td>05:34</td>
+                        </tr>
+                        <tr>
+                            <td>Almost at the Last Song</td>
+                            <td>03:46</td>
+                        </tr>
+                        <tr>
+                            <td>The End</td>
+                            <td>06:05</td>
+                        </tr>
+                    </table>
+                    <blockquote cite="https://www.metacritic.com/music">
+                        "Following the precedent set by 'Songs,' this album delivers additional songs. The sonic experience continues. Listeners will hear sounds. The sounds are arranged. Satisfaction is statistically probable."
+                        <p class="review-source">- Metacritic</p>
+                    </blockquote>
+                </div>
+
+                <div id="content3" class="tab-content">
+                    <table class="album-table">
+                        <tr>
+                            <th colspan="3"><h3>ALL THE SONGS</h3></th>
+                        </tr>
+                        <tr>
+                            <td rowspan="11">
+                                <img class="album-art" src="https://placehold.co/10" alt="Album cover.">
+                            </td>
+                            <td>First Song</td>
+                            <td>03:27</td>
+                        </tr>
+                        <tr>
+                            <td>The Song that is Second in the List</td>
+                            <td>01:51</td>
+                        </tr>
+                        <tr>
+                            <td>Second Song After the First</td>
+                            <td>02:44</td>
+                        </tr>
+                        <tr>
+                            <td>Second to Last Song</td>
+                            <td>05:09</td>
+                        </tr>
+                        <tr>
+                            <td>Fifth and Final Song</td>
+                            <td>03:18</td>
+                        </tr>
+                        <td>The First Song of More Songs</td>
+                            <td>03:31</td>
+                        </tr>
+                        <tr>
+                            <td>The Second Song of the Second Album</td>
+                            <td>04:26</td>
+                        </tr>
+                        <tr>
+                            <td>Third Song, Continuing the Sequence</td>
+                            <td>02:59</td>
+                        </tr>
+                        <tr>
+                            <td>Fourth in the Lineup</td>
+                            <td>05:34</td>
+                        </tr>
+                        <tr>
+                            <td>Almost at the Last Song</td>
+                            <td>03:46</td>
+                        </tr>
+                        <tr>
+                            <td>The End</td>
+                            <td>06:05</td>
+                        </tr>
+                    </table>
+                    <blockquote cite="https://knowyourmeme.com/photos/2051481-source-i-made-it-up">
+                        "This album contains all the songs. Not some. Not most. All. It is a comprehensive sonic archive. The listening experience is long. The songs are sequential. The emotional range is statistically significant. For fans of 'Songs' and 'More Songs,' this is the final form. Completion has been achieved. There is nothing left to add. Or subtract. It is the musical equivalent of a full hard drive."
+                        <p class="review-source">- Trust Me, Bro</p>
+                    </blockquote>
+                </div>
+            </div>
         </section>
     </main>
 

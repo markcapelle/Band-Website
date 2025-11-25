@@ -35,6 +35,12 @@ main {
     padding: 2em;
 }
 
+p {
+  margin-top: 0.5rem;
+}
+.indent {
+  text-indent: 1rem;
+}
 /* Blockquote tag format - currently only used for album reviews */
 blockquote {
   margin-top: 1rem;
@@ -204,12 +210,6 @@ nav {
   flex-direction: row-reverse;
 }
 
-/* .welcome-section .empty-box {
-  flex: 1 1 300px;
-  background: #eaeaea;
-  padding: 1rem;
-}  */
-
 /* Members section */
 .members-section {
   display: flex;
@@ -233,7 +233,7 @@ nav {
 
 .member-info, .member-image {
   flex: 1 1 300px;
-  padding: 1em;
+  padding: 1rem;
   box-sizing: border-box;
 }
 
@@ -241,7 +241,7 @@ nav {
   background: #f9f9f9;
 }
 
-.member-image img {
+.member-image {
   width: 100%;
   height: auto;
   display: block;
@@ -343,13 +343,13 @@ footer a:link, a:visited {
 .album-table td,
 .album-table th {
   outline: 1px solid #000;
-  padding: 0 1rem 0 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .album-art {
   width: 100%;
   max-width: 600px;
-  min-width: 200px;
+  min-width: 140px;
   height: auto;
   border-radius: 8px;
   object-fit: contain;
@@ -375,4 +375,79 @@ footer a:link, a:visited {
 
 .gallery img:hover {
     transform: scale(1.1);
+}
+
+/* ====================================== Tour Dates ====================================== */
+/* general layoutleverages the zigzag already set up in the members section */
+
+.ticket-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #e63946; /* bold accent color */
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ticket-button::before {
+  content: "Buy Tickets";
+}
+
+.ticket-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(230, 57, 70, 0.6);
+
+}
+
+/* ====================================== Tabs System ====================================== */
+/* Applied across whole site */
+/* Hide radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+.tab-container {
+  margin-top: 1rem;
+}
+
+.tab-label {
+  padding: 0.5rem;
+  cursor: pointer;
+  background: #f0f0f0;
+  border-radius: 8px 8px 0 0;
+}
+
+.tab-label:hover {
+  background: #8b8b8b;
+}
+
+/* Active tab style */
+input:checked + .tab-label {
+  background: #fff;
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 520px) {
+  .tab-label {
+    font-size: small;
+  }
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+  /* padding: 20px; */
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Associate tab label to tab content ID */
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: block;
 }
