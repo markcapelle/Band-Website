@@ -189,24 +189,27 @@ nav {
 /* Welcome section */
 .welcome-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2rem;
   margin-bottom: 1rem;
+
 }
 
 .welcome-card {
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
+  flex: 1;
+
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+
+  min-height: 230px;
+  max-height: 300px;
+  margin: 15rem 0 0 0;
 }
 
-.content-box, .empty-box {
-  flex: 1 1 300px;
-  padding: 1rem;
-}
-
-.welcome-card:nth-child(even) {
-  flex-direction: row-reverse;
+.welcome-card:nth-child(odd) {
+  margin: 0 0 15rem 0;
 }
 
 /* ====================================== Zigzag layout ====================================== */
@@ -215,6 +218,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 /* Zigzag layout card */
@@ -247,10 +251,16 @@ nav {
   display: block;
 }
 
-/* Collapse the welcome section and cards */
+/* Collapse the welcome section and zigzag cards */
 @media (max-width: 850px) {
     .welcome-section {
     flex-direction: column;
+  }
+
+  .welcome-card {
+    margin: 0 !important;
+    max-height: none;
+    
   }
 
   .zigzag-card {
@@ -261,9 +271,6 @@ nav {
     flex-direction: column;
   }
 
-    .welcome-section .empty-box {
-    display: none;
-  }
 }
 
 /* ====================================== Footer ====================================== */
@@ -292,7 +299,7 @@ footer a:link, a:visited {
 }
 
 /* collapses footer into single column on narrower screens */
-@media (max-width: 832px) {
+@media (max-width: 850px) {
   footer {
     flex-direction: column;
     align-items: flex-start;
