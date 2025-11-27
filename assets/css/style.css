@@ -209,15 +209,16 @@ nav {
   flex-direction: row-reverse;
 }
 
-/* Members section */
-.members-section {
+/* ====================================== Zigzag layout ====================================== */
+/* Zigzag section */
+.zigzag-section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-/* Band member card */
-.member-card {
+/* Zigzag layout card */
+.zigzag-card {
   display: flex;
   flex-wrap: wrap;
   border: 2px solid #ccc;
@@ -225,22 +226,22 @@ nav {
   overflow: hidden;
 }
 
-/* Member zig-zag layout */
-.member-card:nth-child(even) {
+/* Zigzag layout */
+.zigzag-card:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-.member-info, .member-image {
+.zigzag-info, .zigzag-image {
   flex: 1 1 300px;
   padding: 1rem;
   box-sizing: border-box;
 }
 
-.member-info {
+.zigzag-info {
   background: #f9f9f9;
 }
 
-.member-image {
+.zigzag-image {
   width: 100%;
   height: auto;
   display: block;
@@ -252,11 +253,11 @@ nav {
     flex-direction: column;
   }
 
-  .member-card {
+  .zigzag-card {
     flex-direction: column;
   }
 
-  .member-card:nth-child(even) {
+  .zigzag-card:nth-child(even) {
     flex-direction: column;
   }
 
